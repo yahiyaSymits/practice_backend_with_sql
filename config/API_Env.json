@@ -1,0 +1,16 @@
+{
+    "client": "Thunder Client",
+    "environmentName": "practice_sql_env",
+    "dateExported": "2024-03-26T07:38:13.854Z",
+    "version": "1.0",
+    "variables": [
+        {
+            "name": "baseUrl",
+            "value": "http://localhost:9000/api/v1"
+        },
+        {
+            "name": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUsImlhdCI6MTcxMTQzNzk2MiwiZXhwIjoxNzExNDQxNTYyfQ.vz8hEMrSbRuHJzs5lnFthjX8CzawCAYAybeX2tLZ1m8"
+        }
+    ]
+}

@@ -1,0 +1,214 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Practice_sql",
+    "dateExported": "2024-03-26T07:36:04.822Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "da43bd4f-dc07-4cae-9c9c-045dcc45126b",
+            "name": "auth",
+            "containerId": "",
+            "created": "2024-03-26T07:27:45.134Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "619168b7-ea4e-4d02-a8b8-83ac856c13fc",
+            "name": "posts",
+            "containerId": "",
+            "created": "2024-03-26T07:27:53.888Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "5c95f6a2-8cb3-444d-a4ba-fff90f1c2f4d",
+            "colId": "8dd1b6f5-63e8-490e-936e-8f2c32bef19a",
+            "containerId": "da43bd4f-dc07-4cae-9c9c-045dcc45126b",
+            "name": "login",
+            "url": "{{baseUrl}}/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-26T07:19:34.431Z",
+            "modified": "2024-03-26T07:25:54.264Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"yahiya@gmail.com\",\n  \"password\": \"@yahiya@\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "set-env-var",
+                    "custom": "json.accessToken",
+                    "action": "setto",
+                    "value": "{{token}}"
+                }
+            ]
+        },
+        {
+            "_id": "eea1e741-7b8f-462e-95a6-3ed70ad93bad",
+            "colId": "8dd1b6f5-63e8-490e-936e-8f2c32bef19a",
+            "containerId": "619168b7-ea4e-4d02-a8b8-83ac856c13fc",
+            "name": "get_all_posts",
+            "url": "{{baseUrl}}/posts/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-26T07:27:31.355Z",
+            "modified": "2024-03-26T07:31:13.959Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "set-env-var",
+                    "custom": "json.accessToken",
+                    "action": "setto",
+                    "value": "{{token}}"
+                }
+            ]
+        },
+        {
+            "_id": "87b91cbd-bcbf-4039-8209-162cbe3ae6ac",
+            "colId": "8dd1b6f5-63e8-490e-936e-8f2c32bef19a",
+            "containerId": "da43bd4f-dc07-4cae-9c9c-045dcc45126b",
+            "name": "register",
+            "url": "{{baseUrl}}/auth/register",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-26T07:24:02.865Z",
+            "modified": "2024-03-26T07:28:00.900Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" :\"yahiya\",\n  \"email\": \"yahiya@gmail.com\",\n  \"password\": \"@yahiya@\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a73c9c97-bc3d-4750-b2e3-e0a7b3c7ceea",
+            "colId": "8dd1b6f5-63e8-490e-936e-8f2c32bef19a",
+            "containerId": "619168b7-ea4e-4d02-a8b8-83ac856c13fc",
+            "name": "get_single_post",
+            "url": "{{baseUrl}}/posts/6",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-26T07:30:58.836Z",
+            "modified": "2024-03-26T07:35:03.323Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "set-env-var",
+                    "custom": "json.accessToken",
+                    "action": "setto",
+                    "value": "{{token}}"
+                }
+            ]
+        },
+        {
+            "_id": "ec33f45e-df54-48a6-8a47-837f05a85158",
+            "colId": "8dd1b6f5-63e8-490e-936e-8f2c32bef19a",
+            "containerId": "619168b7-ea4e-4d02-a8b8-83ac856c13fc",
+            "name": "create_new_post",
+            "url": "{{baseUrl}}/posts/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-26T07:31:47.793Z",
+            "modified": "2024-03-26T07:32:34.149Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \"title\": \"My Book\",\n \"content\": \"This book is very intresting\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "set-env-var",
+                    "custom": "json.accessToken",
+                    "action": "setto",
+                    "value": "{{token}}"
+                }
+            ]
+        },
+        {
+            "_id": "de916bb0-8ff8-4120-8bb1-7b9541ca2856",
+            "colId": "8dd1b6f5-63e8-490e-936e-8f2c32bef19a",
+            "containerId": "619168b7-ea4e-4d02-a8b8-83ac856c13fc",
+            "name": "update_post",
+            "url": "{{baseUrl}}/posts/6",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-26T07:34:22.379Z",
+            "modified": "2024-03-26T07:34:56.737Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \"title\": \"My Book\",\n \"content\": \"This book is very booring\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "set-env-var",
+                    "custom": "json.accessToken",
+                    "action": "setto",
+                    "value": "{{token}}"
+                }
+            ]
+        },
+        {
+            "_id": "e40b9cb2-8b34-4a29-8326-ebca19f8e3c9",
+            "colId": "8dd1b6f5-63e8-490e-936e-8f2c32bef19a",
+            "containerId": "619168b7-ea4e-4d02-a8b8-83ac856c13fc",
+            "name": "update_post Copy",
+            "url": "{{baseUrl}}/posts/5",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-03-26T07:35:11.530Z",
+            "modified": "2024-03-26T07:35:37.328Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "set-env-var",
+                    "custom": "json.accessToken",
+                    "action": "setto",
+                    "value": "{{token}}"
+                }
+            ]
+        }
+    ]
+}
